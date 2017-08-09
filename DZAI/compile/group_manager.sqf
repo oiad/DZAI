@@ -10,7 +10,8 @@ _unitGroup setVariable ["rearmEnabled",true];
 
 _vehicle = if ((_unitGroup getVariable ["unitType",""]) in ["static","dynamic"]) then {objNull} else {(vehicle (leader _unitGroup))};
 _useLaunchers = (((count DZAI_launcherTypes) > 0) && {(_weapongrade in DZAI_launcherLevels)});
-_isArmed = _vehicle getVariable ["isArmed",false];
+_isArmed = false;
+if (!(isNil "_vehicle")) then {_isArmed = _vehicle getVariable ["isArmed",false];};
 _antistuckPos = (getWPPos [_unitGroup,(currentWaypoint _unitGroup)]);
 if (isNil {_unitGroup getVariable "GroupSize"}) then {_unitGroup setVariable ["GroupSize",(count (units _unitGroup))]};
 _vehicleMoved = true;

@@ -12,7 +12,8 @@ _vehicle = _this select 0;
 
 if (_vehicle getVariable ["veh_disabled",false]) exitWith {};
 _vehicle setVariable ["veh_disabled",true];
-_unitGroup = _vehicle getVariable "unitGroup";
+//_unitGroup = _vehicle getVariable "unitGroup";
+_unitGroup = _vehicle getVariable ["unitGroup",group _vehicle];
 {_vehicle removeAllEventHandlers _x} count ["HandleDamage","Killed"];
 [_unitGroup,_vehicle] call DZAI_respawnAIVehicle;
 _unitsAlive = {alive _x} count (units _unitGroup);

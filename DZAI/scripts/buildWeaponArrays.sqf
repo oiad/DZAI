@@ -30,8 +30,10 @@ _bldgClasses = [
 _aiWeaponBanList = 
 	[
 		"Crossbow_DZ","Crossbow","MeleeHatchet","MeleeCrowbar","MeleeMachete","MeleeBaseball","MeleeBaseBallBat","MeleeBaseBallBatBarbed","MeleeBaseBallBatNails","Chainsaw", //Melee weapons
-		"ItemMap","Binocular","ItemWatch","ItemCompass","ItemFlashlight","ItemKnife","NVGoggles","ItemGPS","ItemEtool","Binocular_Vector","ItemMatchbox","ItemToolbox", //Non-weapon items
-		"ItemKeyKit","ItemMatchbox" //Epoch items
+		"ItemMap","Binocular","ItemWatch","ItemCompass","ItemFlashlight","NVGoggles","ItemGPS","ItemEtool","Binocular_Vector","ItemToolbox",
+		"ItemKnife","ItemKnife5","ItemKnife4","ItemKnife3","ItemKnife2","ItemKnife1","ItemKnifeBlunt",
+		"ItemMatchbox","Item5Matchbox","Item4Matchbox","Item3Matchbox","Item2Matchbox","Item1Matchbox","ItemMatchboxEmpty", //Non-weapon items
+		"ItemKeyKit" //Epoch items
 	];
 
 //Add user-specified banned weapons to DZAI weapon banlist.

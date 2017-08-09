@@ -291,9 +291,9 @@ DZAI_addTempNVG = {
 DZAI_respawnAIVehicle = {
 	//Usage: [_unitGroup,_vehicle] call DZAI_respawnAIVehicle;
 	private ["_vehicle","_unitType"];
-	_unitType = (_this select 0) getVariable ["unitType",""];
+	_unitType = (_this select 0) getVariable ["unitType","other"];
 	_vehicle = _this select 1;
-	call {
+	//call {
 		if (_unitType in ["aircustom","landcustom"]) exitWith {
 			private ["_spawnParams"];
 			_spawnParams = (_this select 0) getVariable ["spawnParams",false];
@@ -306,7 +306,7 @@ DZAI_respawnAIVehicle = {
 			[2,typeOf _vehicle] call fnc_respawnHandler;
 			if (_vehicle isKindOf "Air") then {DZAI_curHeliPatrols = DZAI_curHeliPatrols - 1} else {DZAI_curLandPatrols = DZAI_curLandPatrols - 1};
 		};
-	};
+	//};
 	_vehicle setVariable ["DZAI_deathTime",diag_tickTime]; //mark vehicle for cleanup
 	
 	true
