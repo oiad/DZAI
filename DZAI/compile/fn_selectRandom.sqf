@@ -18,5 +18,5 @@ if(count _this > 0) then
     _ret = count _this;           //number of elements in the array
     _ret = floor (random _ret);   //floor it first 
     _ret = _this select _ret;     //get the element, return it
-};
+} else {_ret = _this;};
 _ret

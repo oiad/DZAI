@@ -72,6 +72,8 @@ if (_damage > 0.4) then {
 	//Uncomment the following line to report blood damage to rpt log
 	//diag_log format ["DEBUG :: Unit %1 took %2 blood damage in part %3 by ammo %4 (Blood level: %5).",_unit,_blooddamage,_hit,_ammo,_newbloodlevel];
 	
+	_unit setVariable ["unithealth",_unithealth];
+	
 	if (_newbloodlevel < 0) then {
 		_nul = [_unit,_source,_deathType] call DZAI_unitDeath;
 		//diag_log format ["DEBUG :: %1 was killed by %2 from %3m. Cause: %4.",_unit,_source,(_unit distance _source),_deathType];
